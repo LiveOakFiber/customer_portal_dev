@@ -11,6 +11,7 @@ use App\Http\Controllers\PayPalController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\StripeController;
 use App\Http\Controllers\SubdivisionController;
+use App\Http\Controllers\TermsController;
 use App\Http\Controllers\TicketController;
 use Illuminate\Support\Facades\Route;
 
@@ -91,6 +92,15 @@ Route::middleware('language')->group(function () {
             Route::get('/', [ProfileController::class, 'show']);
             Route::patch('/', [ProfileController::class, 'update']);
             Route::patch('/password', [ProfileController::class, 'updatePassword']);
+        });
+
+        /**
+         * Terms and Conditions routes
+         */
+        Route::prefix('terms')->group(function () {
+            Route::get('/', [TermsController::class, 'show']);
+            #Route::patch('/', [ProfileController::class, 'update']);
+            #Route::patch('/password', [ProfileController::class, 'updatePassword']);
         });
 
         /**
