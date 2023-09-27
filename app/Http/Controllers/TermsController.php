@@ -2,8 +2,6 @@
 
 namespace App\Http\Controllers;
 
-//use App\Http\Requests\ProfileUpdateRequest;
-//use App\Http\Requests\UpdatePasswordRequest;
 use App\SystemSetting;
 use Carbon\Carbon;
 use Exception;
@@ -38,6 +36,6 @@ class TermsController extends Controller
         }
         $country = SystemSetting::first()->country;*/
 
-        return view('pages.profile.show');
+        return view('pages.terms.show');
     }
 }
