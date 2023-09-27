@@ -11,6 +11,7 @@ use App\Http\Controllers\PayPalController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\StripeController;
 use App\Http\Controllers\SubdivisionController;
+use App\Http\Controllers\TermsController;
 use App\Http\Controllers\TicketController;
 use Illuminate\Support\Facades\Route;
 
