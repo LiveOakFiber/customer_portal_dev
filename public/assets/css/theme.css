@@ -1,6 +1,13 @@
 * {
 --primary: #2c7be5;
 --font: 'CircularStd', sans-serif;
+--lof_primary_blue: #272360;
+--lof_primary_red: #b82026;
+--lof_secondary_low: #030304;
+--lof_secondary_mid: #58585a;
+--lof_secondary_high: #ffffff;
+--lof_gradient_start: #27469a;
+--lof_gradient_end: #272360;
 }
 
 *,
