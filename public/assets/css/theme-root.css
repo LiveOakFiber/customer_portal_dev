@@ -12,6 +12,13 @@
      vertical-align: baseline;
      font-family: 'CircularStd', sans-serif;
      font-smooth: always;
+     --lof_primary_blue: #272360;
+     --lof_primary_red: #b82026;
+     --lof_secondary_low: #030304;
+     --lof_secondary_mid: #58585a;
+     --lof_secondary_high: #ffffff;
+     --lof_gradient_start: #27469a;
+     --lof_gradient_end: #272360;
 }
 
  @keyframes fadeIn {
@@ -300,7 +307,8 @@
  label {
      font-size: 14px;
      letter-spacing: .2px;
-     color: #98a0a6;
+     /*color: #98a0a6;*/
+     color: var(--lof_primary_blue);
      margin: 8px 0;
      display: block;
 }
