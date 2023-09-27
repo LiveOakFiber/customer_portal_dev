@@ -94,6 +94,15 @@ Route::middleware('language')->group(function () {
         });
 
         /**
+         * Terms and Conditions routes
+         */
+        Route::prefix('terms')->group(function () {
+            Route::get('/', [TermsController::class, 'show']);
+            #Route::patch('/', [ProfileController::class, 'update']);
+            #Route::patch('/password', [ProfileController::class, 'updatePassword']);
+        });
+
+        /**
          * Ticketing routes
          */
         Route::prefix('tickets')->middleware('tickets')->group(function () {
