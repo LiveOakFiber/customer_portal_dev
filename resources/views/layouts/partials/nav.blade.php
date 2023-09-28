@@ -49,6 +49,10 @@
                <i class="fe fe-package"></i> {{utrans("nav.contracts")}}</a>
             </li>
             @endif
+            <li class="nav-item">
+               <a href="/portal/terms">
+               <i class="fe fe-package"></i> Terms and Conditions</a>
+            </li>
          </ul>
          <h6 class="navbar-heading text-muted mt-4">
             {{utrans("nav.myAccount")}}
