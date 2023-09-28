@@ -15,8 +15,7 @@
                         </h6>
                         <!-- Title -->
                         <h1 class="header-title">
-                           <!--{{utrans("headers.contracts")}}-->
-                           Terms and Conditions
+                           WHAT YOU NEED TO KNOW
                         </h1>
                      </div>
                      <div class="col-auto">
