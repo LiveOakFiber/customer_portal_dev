@@ -36,6 +36,8 @@ class TermsController extends Controller
         }
         $country = SystemSetting::first()->country;*/
 
-        return view('pages.terms.show');
+        return view('pages.terms.index');
     }
 }
+
+?>
