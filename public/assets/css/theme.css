@@ -2097,7 +2097,7 @@ fieldset:disabled a.btn {
 }
 .btn-ticket {
 	color: #fff;
-	border-color: ##46abf3;
+	border-color: #46abf3;
 	background-color: #46abf3;
 }
 .btn-ticket:hover {
@@ -5484,7 +5484,7 @@ button.bg-light:focus {
 	right: 0;
 	bottom: 0;
 	left: 0;
-	background-image: linear-gradient(#3c95ec, #1c7aef);
+	background-image: linear-gradient(to right, #27469a, #272360);
 	opacity: .85;
 }
 a.bg-dark:hover,
