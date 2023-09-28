@@ -51,7 +51,7 @@
             @endif
             <li class="nav-item">
             <a @if(str_contains(Route::getCurrentRoute()->uri(),"terms")) class="nav-link selected" @else class="nav-link" @endif href="{{action([\App\Http\Controllers\TermsController::class, 'show'])}}">
-               <i class="fe fe-package"></i> Terms and Conditions</a>
+               <i class="fe fe-book-open"></i> Terms and Conditions</a>
             </li>
          </ul>
          <h6 class="navbar-heading text-muted mt-4">
