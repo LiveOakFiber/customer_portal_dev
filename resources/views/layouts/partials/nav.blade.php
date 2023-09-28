@@ -50,7 +50,7 @@
             </li>
             @endif
             <li class="nav-item">
-            <a @if(str_contains(Route::getCurrentRoute()->uri(),"contracts")) class="nav-link selected" @else class="nav-link" @endif href="{{action([\App\Http\Controllers\TermsController::class, 'index'])}}">
+            <a @if(str_contains(Route::getCurrentRoute()->uri(),"terms")) class="nav-link selected" @else class="nav-link" @endif href="{{action([\App\Http\Controllers\TermsController::class, 'index'])}}">
                <i class="fe fe-package"></i> Terms and Conditions</a>
             </li>
          </ul>
