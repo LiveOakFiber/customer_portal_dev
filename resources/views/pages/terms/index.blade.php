@@ -27,7 +27,7 @@
             </div>
             <!-- Taxes and Fees -->
             <div class="card mt-4">
-                <div class="card-header"><h4 class="card-title text-muted mt-3">Government Taxes &amp; Fees</h4></div>
+                <div class="card-header"><h4 class="card-title text-muted mt-3">GOVERNMENT TAXES & FEES</h4></div>
                 <div class="card-body">Government taxes &amp; fees includes sales, use, excise, public utility &amp; E911 taxes &amp; governmental charges &amp; 
                     fees that we are required by law to bill &amp; remit. These may change without notice.</div>
             </div>
@@ -49,6 +49,13 @@
             </div>
             <!-- 24/7 Technical Support -->
             <div class="card mt-4">
+                <div class="card-header"><h4 class="card-title text-muted mt-3">24/7 TECHNICAL SUPPORT</h4></div>
+                <div class="card-body">
+                    We are here when you need us! Contact our tech support 24/7 by phone 888-454-8362
+                </div>
+            </div>
+            <!-- Terms and Conditions -->
+            <div class="card mt-4">
                 <div class="card-header"><h4 class="card-title text-muted mt-3">TERMS AND CONDITIONS</h4></div>
                 <div class="card-body">
                     You are subject to LiveOak Fiber&apos;s terms and conditions, which can
@@ -59,7 +66,7 @@
                     understand all of the terms of use.
                 </div>
             </div>
-            <!-- Terms and Conditions -->
+            <!-- Billing Disputes and Resolutions -->
             <div class="card mt-4">
                 <div class="card-header"><h4 class="card-title text-muted mt-3">BILLING DISPUTES AND RESOLUTION</h4></div>
                 <div class="card-body">
@@ -68,11 +75,6 @@
                     no later than 60 days from the due date
                     indicated
                 </div>
-            </div>
-            <!-- Billing Disputes and Resolutions -->
-            <div class="card mt-4">
-                <div class="card-header"><h4 class="card-title text-muted mt-3">Government Taxes &amp; Fees</h4></div>
-                <div class="card-body">Government taxes &amp; fees includes sales, use, excise, public utility &amp; E911 taxes &amp; governmental charges &amp; fees that we are required by law to bill &amp; remit. These may change without notice.</div>
             </div>
         </div>
     </div>
