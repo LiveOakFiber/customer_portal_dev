@@ -49,7 +49,7 @@
             </div>
             <!-- 24/7 Technical Support -->
             <div class="card mt-4">
-                <div class="card-header"><h4 class="card-title text-muted mt-3">Government Taxes &amp; Fees</h4></div>
+                <div class="card-header"><h4 class="card-title text-muted mt-3">TERMS AND CONDITIONS</h4></div>
                 <div class="card-body">
                     You are subject to LiveOak Fiber&apos;s terms and conditions, which can
                     be found at www.liveoakfiber.com/terms. LiveOak Fiber&apos;s terms and
