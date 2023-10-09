@@ -31,27 +31,6 @@
 <div class="container-fluid">
       <div class="row justify-content-center">
          <div class="col-12">
-            <!-- Header -->
-            <div class="header mt-md-5">
-               <div class="header-body">
-                  <div class="row align-items-center">
-                     <div class="col">
-                        <!-- Pretitle -->
-                        <h6 class="header-pretitle">
-                           <!--{{utrans("headers.summary")}}-->
-                           
-                        </h6>
-                        <!-- Title -->
-                        <h1 class="header-title">
-                           WHAT YOU NEED TO KNOW
-                        </h1>
-                     </div>
-                     <div class="col-auto">
-                     </div>
-                  </div>
-                  <!-- / .row -->
-               </div>
-            </div>
             <!-- Taxes and Fees -->
             <div class="card mt-4">
                 <div class="card-header"><h4 class="card-title text-muted mt-3">GOVERNMENT TAXES & FEES</h4></div>
