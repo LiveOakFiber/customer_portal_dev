@@ -17,21 +17,7 @@
                What you need to know
                </h1>
             </div>
-            <div class="col-auto">
-               <!-- Nav -->
-               <ul class="nav nav-tabs header-tabs">
-                  <li class="nav-item">
-                     <a class="nav-link text-right">
-                        <h6 class="header-pretitle text-secondary-light">
-                         {{utrans("headers.amountDue")}}
-                        </h6>
-                        <h3 class="text-white mb-0">
-                           {{Formatter::currency($values['amount_due'])}}
-                        </h3>
-                     </a>
-                  </li>
-               </ul>
-            </div>
+            
          </div>
          <!-- / .row -->
       </div>
