@@ -48,7 +48,7 @@
 		margin: 0;
 		text-align: left;
 		color: #12263f;
-		background-image:linear-gradient(#b82026, #cd4248);
+		background-image:linear-gradient(var(--lof_gradient_end), var(--lof_gradient_start));
 	}
 	[tabindex='-1']:focus {
 		outline: 0 !important;
