@@ -36,7 +36,7 @@
    </div>
 </div>
 <!-- / .header -->
-<div class="container-fluid">
+<div class="container-fluid mt--6">
       <div class="row justify-content-center">
          <div class="col-12">
             <!-- Taxes and Fees -->
