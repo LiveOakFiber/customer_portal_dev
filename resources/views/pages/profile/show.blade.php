@@ -9,11 +9,11 @@
             <div class="col">
                <!-- Pretitle -->
                <h6 class="header-pretitle text-secondary-light">
-                Terms and Conditions
+                &nbps;
                </h6>
                <!-- Title -->
                <h1 class="header-title text-white">
-               What you need to know
+               {{utrans("headers.myDetails")}}
                </h1>
             </div>
             <div class="col-auto">
