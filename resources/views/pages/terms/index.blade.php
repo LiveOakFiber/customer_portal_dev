@@ -1,6 +1,5 @@
 @extends('layouts.full')
 @section('content')
-
 <!-- HEADER -->
 <div class="header index-bg pb-5">
    <div class="container-fluid">
@@ -17,7 +16,16 @@
                What you need to know
                </h1>
             </div>
-            <div class="col-auto"><a class="nav-link text-right"><ul class="nav nav-tabs header-tabs"><li class="nav-item"><h6 class="header-pretitle text-secondary-light">&nbsp;</h6><h3 class="text-white mb-0">&nbsp;</h3></li></ul></a></div>
+            <div class="col-auto">
+                <ul class="nav nav-tabs header-tabs">
+                    <li class="nav-item">
+                        <a class="nav-link text-right">
+                            <h6 class="header-pretitle text-secondary-light">&nbsp;</h6>
+                            <h3 class="text-white mb-0">&nbsp;</h3>
+                        </a>
+                    </li>
+                </ul>
+            </div>
          </div>
          <!-- / .row -->
       </div>
