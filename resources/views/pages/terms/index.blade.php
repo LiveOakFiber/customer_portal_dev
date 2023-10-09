@@ -17,7 +17,7 @@
                What you need to know
                </h1>
             </div>
-            
+            <div class="col-auto"><ul class="nav nav-tabs header-tabs"><li class="nav-item"><h6 class="header-pretitle text-secondary-light">&nbsp;</h6><h3 class="text-white mb-0">&nbsp;</h3></li></ul></div>
          </div>
          <!-- / .row -->
       </div>
