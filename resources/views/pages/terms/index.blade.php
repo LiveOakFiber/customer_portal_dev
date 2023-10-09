@@ -10,11 +10,11 @@
             <div class="col">
                <!-- Pretitle -->
                <h6 class="header-pretitle text-secondary-light">
-                <!--{{utrans("headers.summary")}}-->Terms and Conditions
+                Terms and Conditions
                </h6>
                <!-- Title -->
                <h1 class="header-title text-white">
-               <!--{{utrans("headers.dashboard")}}-->What you need to know
+               What you need to know
                </h1>
             </div>
             <div class="col-auto">
