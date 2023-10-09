@@ -9,7 +9,7 @@
             <div class="col">
                <!-- Pretitle -->
                <h6 class="header-pretitle text-secondary-light">
-                &nbps;
+                &nbsp;
                </h6>
                <!-- Title -->
                <h1 class="header-title text-white">
