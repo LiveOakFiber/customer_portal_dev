@@ -1,5 +1,47 @@
 @extends('layouts.full')
 @section('content')
+
+<!-- HEADER -->
+<div class="header index-bg pb-5">
+   <div class="container-fluid">
+      <!-- Body -->
+      <div class="header-body-nb">
+         <div class="row align-items-end">
+            <div class="col">
+               <!-- Pretitle -->
+               <h6 class="header-pretitle text-secondary-light">
+                <!--{{utrans("headers.summary")}}-->Terms and Conditions
+               </h6>
+               <!-- Title -->
+               <h1 class="header-title text-white">
+               <!--{{utrans("headers.dashboard")}}-->What you need to know
+               </h1>
+            </div>
+            <div class="col-auto">
+               <!-- Nav -->
+               <ul class="nav nav-tabs header-tabs">
+                  <li class="nav-item">
+                     <a class="nav-link text-right">
+                        <h6 class="header-pretitle text-secondary-light">
+                         {{utrans("headers.amountDue")}}
+                        </h6>
+                        <h3 class="text-white mb-0">
+                           {{Formatter::currency($values['amount_due'])}}
+                        </h3>
+                     </a>
+                  </li>
+               </ul>
+            </div>
+         </div>
+         <!-- / .row -->
+      </div>
+      <!-- / .header-body -->
+      <!-- Footer -->
+      <div class="header-footer">
+      </div>
+   </div>
+</div>
+<!-- / .header -->
 <div class="container-fluid">
       <div class="row justify-content-center">
          <div class="col-12">
