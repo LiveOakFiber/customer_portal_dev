@@ -3900,7 +3900,7 @@ input[type='button'].btn-block {
 	flex-direction: column;
 	min-width: 0;
 	word-wrap: break-word;
-	border: 2px solid #272360;
+	border: 1px solid #272360;
 	border-radius: .5rem;
 	background-color: #fff;
 	background-clip: border-box;
@@ -9648,7 +9648,7 @@ a.text-body:focus {
 }
 .card {
 	margin-bottom: 1.5rem;
-	box-shadow: 0 .75rem 1.5rem rgba(18, 38, 63, .03);
+	box-shadow: 0 .5rem .5rem rgba(18, 38, 63, .3);
 }
 .card-header {
 	display: flex;
