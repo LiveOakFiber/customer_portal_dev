@@ -1,6 +1,6 @@
 @extends('layouts.full')
 @section('content')
-<div class="container-fluid">
+<div class="container-fluid dark_bg">
    <div class="row justify-content-center">
       <div class="col-12">
          <div class="header mt-md-5">

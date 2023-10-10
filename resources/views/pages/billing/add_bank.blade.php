@@ -1,6 +1,6 @@
 @extends('layouts.full')
 @section('content')
-    <div class="container-fluid">
+    <div class="container-fluid dark_bg">
         <div class="row justify-content-center">
             <div class="col-12">
                 <!-- Header -->
@@ -103,7 +103,7 @@
                         </div>
                     </div>
                     <div class="col mt-1">
-                        <small class="text-muted">
+                        <small class="text-muted autopay">
                             {{utrans("billing.saveAsAutoPayMethodAccount")}}
                         </small>
                     </div>
