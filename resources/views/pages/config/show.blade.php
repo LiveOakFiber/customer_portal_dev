@@ -86,7 +86,9 @@
             {{--</div>--}}
             {{--</div>--}}
       </div>
-   </div>      <div class="card">
+
+
+      <div class="card">
          <div class="card-header">
             <h4 class="card-header-title text-muted">
                <i class="fe fe-mail mr-3"></i> Mail Settings
@@ -420,7 +422,7 @@
                </div>
             </div>
       </div>
-
+   </div>
 
       <div class="card">
          <div class="card-header">
