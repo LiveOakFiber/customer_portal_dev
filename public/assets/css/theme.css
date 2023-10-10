@@ -2108,8 +2108,8 @@
 	}
 	.btn-secondary {
 		color: #fff;
-		border-color: #272360;
-		background-color: #272360;
+		border-color: #fff;
+		background-color: #b82026;
 	}
 	.btn-secondary:hover {
 		color: #fff;
@@ -2332,8 +2332,8 @@
 	}
 	.btn-white {
 		color: #fff;
-		border-color: #272360;
-		background-color: #272360;
+		border-color: #fff;
+		background-color: #b82026;
 	}
 	.btn-white:hover {
 		color: #283e59;
@@ -5485,7 +5485,7 @@
 		right: 0;
 		bottom: 0;
 		left: 0;
-		background-image: #272360;
+		background-color: #272360;
 	}
 	a.bg-dark:hover,
 	a.bg-dark:focus,
@@ -9247,7 +9247,7 @@
 		color: #12263f !important;
 	}
 	.text-muted {
-		color: #b82026 !important;
+		color: #b82026;
 	}
 	.text-black-50 {
 		color: rgba(18, 38, 63, .5) !important;
@@ -9664,9 +9664,11 @@
 	}
 	.card-title {
 		margin-bottom: .5rem;
+		color: #272360;
 	}
 	.card-header-title {
 		margin-bottom: 0;
+		color: #272360;
 	}
 	.card-header-tabs {
 		margin-top: -.5rem;
@@ -9784,6 +9786,7 @@
 	.form-text {
 		margin-top: 0;
 		margin-bottom: .5rem;
+		color: #fff;
 	}
 	.form-control[readonly='readonly'] {
 		background-color: #fff;
@@ -10474,6 +10477,7 @@
 		padding-bottom: .5rem;
 		letter-spacing: .04em;
 		text-transform: uppercase;
+		color: #272360;
 	}
 	.navbar-vertical.navbar-expand-xs {
 		position: fixed;
