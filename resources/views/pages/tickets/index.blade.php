@@ -1,11 +1,42 @@
 @extends('layouts.full')
 @section('content')
+<!-- HEADER -->
+<div class="header index-bg pb-5">
+   <div class="container-fluid">
+      <!-- Body -->
+      <div class="header-body-nb">
+         <div class="row align-items-end">
+            <div class="col">
+               <!-- Pretitle -->
+               <h6 class="header-pretitle text-secondary-light">
+               {{utrans("headers.summary")}}
+               </h6>
+               <!-- Title -->
+               <h1 class="header-title text-white">
+               {{utrans("headers.tickets")}}
+               </h1>
+            </div>
+            <div class="col-auto">
+            <!-- Button -->
+            <a class="btn btn-primary" href="{{action([\App\Http\Controllers\TicketController::class, 'create'])}}" role="button">
+            {{utrans("tickets.createNewTicket")}} <span class="fe fe-edit-2"></span> 
+            </a>
+         </div>
+         <!-- / .row -->
+      </div>
+      <!-- / .header-body -->
+      <!-- Footer -->
+      <div class="header-footer">
+      </div>
+   </div>
+</div>
+<!-- / .header -->
 <div class="container-fluid">
 <div class="row justify-content-center">
 <div class="col-12">
 <div class="header mt-md-5">
    <div class="header-body">
-      <div class="row align-items-center">
+      <!--<div class="row align-items-center">
          <div class="col">
             <h6 class="header-pretitle">
              {{utrans("headers.summary")}}
@@ -14,12 +45,12 @@
             {{utrans("headers.tickets")}}
             </h1>
          </div>
-         <div class="col-auto">
+         <div class="col-auto">-->
             <!-- Button -->
-            <a class="btn btn-primary" href="{{action([\App\Http\Controllers\TicketController::class, 'create'])}}" role="button">
+            <!--<a class="btn btn-primary" href="{{action([\App\Http\Controllers\TicketController::class, 'create'])}}" role="button">
             {{utrans("tickets.createNewTicket")}} <span class="fe fe-edit-2"></span> 
             </a>
-         </div>
+         </div>-->
       </div>
       <div class="row align-items-center">
          <div class="col">
