@@ -421,7 +421,7 @@
                </div>
             </div>
       </div>
-
+      </div>
 
       <div class="card">
          <div class="card-header">
@@ -589,7 +589,7 @@
             {!! Form::close() !!}
          </div>
       </div>
-   </div>
+   
 </div>
 @endsection
 @section('additionalJS')
