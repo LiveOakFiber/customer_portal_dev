@@ -49,6 +49,7 @@
 		text-align: left;
 		color: #12263f;
 		background-image:linear-gradient(var(--lof_gradient_end), var(--lof_gradient_start));
+		background-attachment: fixed;
 	}
 	[tabindex='-1']:focus {
 		outline: 0 !important;
