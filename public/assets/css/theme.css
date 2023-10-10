@@ -2070,7 +2070,7 @@
 		background-color: #b82026;
 	}
 	.ticket-nav {
-		color: #fff;
+		color: #fff !important;
 	}
 
 	.autopay {
