@@ -1,5 +1,6 @@
 @extends('layouts.no_nav')
 @section('content')
+
 <div class="container-fluid">
 <div class="row justify-content-center">
    <div class="col-lg-8 col-md-8 col-12">
