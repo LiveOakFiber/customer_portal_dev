@@ -1,19 +1,23 @@
 @extends('layouts.full')
 @section('content')
-<!-- HEADER -->
-<div class="header index-bg pb-5">
-   <div class="container-fluid">
-      <!-- Body -->
-      <div class="header-body-nb">
-         <div class="row align-items-end">
+<style nonce="{{ csp_nonce() }}">
+   #usage-progressbar { width: {{$usagePercentage}}% }
+</style>
+<div class="container-fluid">
+<div class="row justify-content-center">
+<div class="col-12">
+   <!-- Header -->
+   <div class="header mt-md-5">
+      <div class="header-body">
+         <div class="row align-items-center">
             <div class="col">
                <!-- Pretitle -->
-               <h6 class="header-pretitle text-secondary-light">
-               {{utrans("headers.summary")}}
+               <h6 class="header-pretitle">
+                {{utrans("headers.summary")}}
                </h6>
                <!-- Title -->
-               <h1 class="header-title text-white">
-               {{utrans("headers.dataUsage")}}
+               <h1 class="header-title">
+                {{utrans("headers.dataUsage")}}
                </h1>
             </div>
             @if($policyDetails->allow_user_to_purchase_capacity === true)
@@ -23,21 +27,11 @@
                </a>
             </div>
             @endif
+         </div>
          <!-- / .row -->
-      </div>
-      <!-- / .header-body -->
-      <!-- Footer -->
-      <div class="header-footer">
       </div>
    </div>
 </div>
-<!-- / .header -->
-<style nonce="{{ csp_nonce() }}">
-   #usage-progressbar { width: {{$usagePercentage}}% }
-</style>
-<div class="container-fluid">
-<div class="row justify-content-center">
-
 @if($policyDetails->has_policy === true && $currentUsage)
 <div class="col-12 col-sm-12 col-md-12">
    <!-- Card -->
