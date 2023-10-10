@@ -211,7 +211,7 @@
 	label {
 		display: inline-block;
 		margin-bottom: .5rem;
-		color: #fff;
+		color: black;
 	}
 	button {
 		border-radius: 0;
@@ -2066,9 +2066,18 @@
 	}
 	.btn-primary {
 		color: #fff;
-		border-color: var(--primary);;
-		background-color: var(--primary);;
+		border-color: #b82026;
+		background-color: #b82026;
 	}
+	.ticket-nav {
+		color: #fff;
+	}
+
+	.dark_bg label {
+		color: #fff;
+	}
+
+
 	.btn-primary:hover {
 		color: #fff;
 		border-color: #1862c6;
@@ -9161,9 +9170,6 @@
 	.font-italic {
 		font-style: italic !important;
 	}
-	.text-white {
-		color: #fff !important;
-	}
 	.text-primary {
 		color: var(--primary); !important;
 	}
@@ -11501,6 +11507,7 @@
 	}
 	.header-title {
 		margin-bottom: 0;
+		color: #fff;
 	}
 	.header-subtitle {
 		margin-top: .375rem;
