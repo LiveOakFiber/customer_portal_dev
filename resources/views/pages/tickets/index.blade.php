@@ -25,7 +25,7 @@
          <div class="col">
             <ul class="nav nav-tabs nav-overflow header-tabs">
                <li class="nav-item">
-                  <a href="#!" class="nav-link active">
+                  <a href="#!" class="nav-link active ticket-nav">
                   All <span class="badge badge-pill badge-soft-secondary">{{count($tickets)}}</span>
                   </a>
                </li>
