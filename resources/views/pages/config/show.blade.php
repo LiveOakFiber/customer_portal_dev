@@ -1,5 +1,6 @@
 @extends('layouts.no_nav')
 @section('content')
+
 <div class="container-fluid">
 <div class="row justify-content-center">
    <div class="col-lg-8 col-md-8 col-12">
@@ -86,9 +87,7 @@
             {{--</div>--}}
             {{--</div>--}}
       </div>
-
-
-      <div class="card">
+   </div>      <div class="card">
          <div class="card-header">
             <h4 class="card-header-title text-muted">
                <i class="fe fe-mail mr-3"></i> Mail Settings
@@ -422,7 +421,7 @@
                </div>
             </div>
       </div>
-   </div>
+      </div>
 
       <div class="card">
          <div class="card-header">
@@ -590,7 +589,7 @@
             {!! Form::close() !!}
          </div>
       </div>
-   </div>
+   
 </div>
 @endsection
 @section('additionalJS')
