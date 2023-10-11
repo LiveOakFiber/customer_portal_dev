@@ -2071,18 +2071,6 @@
 		border-color: #b82026;
 		background-color: #b82026;
 	}
-	.ticket-nav {
-		color: #fff !important;
-	}
-
-	.autopay {
-		color: #fff;
-	}
-
-	.dark_bg label {
-		color: #fff;
-	}
-
 
 	.btn-primary:hover {
 		color: #fff;
@@ -11738,4 +11726,17 @@
 	
 	#ccIcon {
 		width: 25px;
+	}
+
+	
+	.ticket-nav {
+		color: #fff !important;
+	}
+
+	.autopay {
+		color: #fff !important;
+	}
+
+	.dark_bg label {
+		color: #fff;
 	}
