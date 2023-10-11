@@ -2086,7 +2086,7 @@
 	.btn-primary:hover {
 		color: #fff;
 		border-color: #1862c6;
-		background-color: #1a68d1;
+		background-color: var(--lof_secondary_mid);
 	}
 	.btn-primary:focus,
 	.btn-primary.focus {
@@ -2128,7 +2128,7 @@
 	.btn-secondary:hover {
 		color: #fff;
 		border-color: #566b88;
-		background-color: #5b7190;
+		background-color: var(--lof_secondary_mid);
 	}
 	.btn-secondary:focus,
 	.btn-secondary.focus {
@@ -2352,7 +2352,7 @@
 	.btn-white:hover {
 		color: #283e59;
 		border-color: #e6e6e6;
-		background-color: #ececec;
+		background-color: var(--lof_secondary_mid);
 	}
 	.btn-white:focus,
 	.btn-white.focus {
@@ -2417,7 +2417,7 @@
 	.btn-outline-primary:hover {
 		color: #fff;
 		border-color: #5e1013;
-		background-color: #5e1013;
+		background-color: var(--lof_secondary_mid);
 	}
 	.btn-outline-primary:focus,
 	.btn-outline-primary.focus {
