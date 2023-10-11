@@ -5,6 +5,7 @@
 	--lof_primary_red: #b82026;
 	--lof_secondary_low: #030304;
 	--lof_secondary_mid: #58585a;
+	--lof_secondary_mid_border: #3f3f40;
 	--lof_secondary_high: #ffffff;
 	--lof_gradient_start: #27469a;
 	--lof_gradient_end: #272360;
@@ -2085,7 +2086,7 @@
 
 	.btn-primary:hover {
 		color: #fff;
-		border-color: #1862c6;
+		border-color: var(--lof_secondary_mid_border);
 		background-color: var(--lof_secondary_mid);
 	}
 	.btn-primary:focus,
@@ -2117,8 +2118,8 @@
 	}
 	.btn-ticket:hover {
 		color: #fff;
-		border-color: #46abf3;
-		background-color: #46abf3;
+		border-color: var(--lof_secondary_mid_border);
+		background-color: var(--lof_secondary_mid);
 	}
 	.btn-secondary {
 		color: #fff;
@@ -2127,7 +2128,7 @@
 	}
 	.btn-secondary:hover {
 		color: #fff;
-		border-color: #566b88;
+		border-color: var(--lof_secondary_mid_border);
 		background-color: var(--lof_secondary_mid);
 	}
 	.btn-secondary:focus,
@@ -2350,8 +2351,8 @@
 		background-color: #b82026;
 	}
 	.btn-white:hover {
-		color: #283e59;
-		border-color: #e6e6e6;
+		color: #fff;
+		border-color: var(--lof_secondary_mid_border);
 		background-color: var(--lof_secondary_mid);
 	}
 	.btn-white:focus,
@@ -2416,7 +2417,7 @@
 	}
 	.btn-outline-primary:hover {
 		color: #fff;
-		border-color: #5e1013;
+		border-color: var(--lof_secondary_mid_border);
 		background-color: var(--lof_secondary_mid);
 	}
 	.btn-outline-primary:focus,
@@ -2448,8 +2449,8 @@
 	}
 	.btn-outline-secondary:hover {
 		color: #fff;
-		border-color: #6e84a3;
-		background-color: #6e84a3;
+		border-color: var(--lof_secondary_mid_border);
+		background-color: var(--lof_secondary_mid);
 	}
 	.btn-outline-secondary:focus,
 	.btn-outline-secondary.focus {
@@ -9634,7 +9635,7 @@
 	}
 	.btn-white:hover,
 	.btn-white:focus {
-		border-color: #d2ddec;
+		border-color: #fff;
 		background-color: var(--lof_secondary_mid);
 	}
 	.btn-outline-secondary:not(:hover):not([aria-expanded='true']):not([aria-pressed='true']) {
