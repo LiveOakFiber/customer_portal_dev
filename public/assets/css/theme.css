@@ -9635,7 +9635,7 @@
 	.btn-white:hover,
 	.btn-white:focus {
 		border-color: #d2ddec;
-		background-color: #f9fbfd;
+		background-color: var(--lof_secondary_mid);
 	}
 	.btn-outline-secondary:not(:hover):not([aria-expanded='true']):not([aria-pressed='true']) {
 		border-color: #d2ddec;
