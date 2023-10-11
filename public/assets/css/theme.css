@@ -11704,7 +11704,7 @@
 		}
 	}
 	.selected {
-		color: var(--primary) !important;
+		color: #b82026 !important;
 		animation: navSelect 1;
 		animation-duration: 1s;
 	}
