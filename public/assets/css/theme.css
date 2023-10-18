@@ -16,7 +16,7 @@
 	*::after {
 		box-sizing: border-box;
 	}
-	html {
+	/* html {
 		font-family: var(--font);
 		line-height: 1.15;
 		-webkit-text-size-adjust: 100%;
@@ -51,7 +51,7 @@
 		color: #12263f;
 		background-color:#fff;
 		background-attachment: fixed;
-	}
+	} */
 	[tabindex='-1']:focus {
 		outline: 0 !important;
 	}
