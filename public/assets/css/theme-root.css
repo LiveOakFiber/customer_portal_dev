@@ -1,4 +1,4 @@
-/* customer portal, root views _ css by alec armbruster for sonar's customer portal 2019, made with <3 in california */
+/* customer portal, root views _ css by alec armbruster for sonar's customer portal 2019, made with <3 in california
  @import 'circular-std.css';
  * {
      margin: 0;
@@ -556,4 +556,4 @@
           animation-duration: 1s;
           transition: opacity .3s ease-out;
      }
-}
+} */
