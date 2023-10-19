@@ -1,5 +1,4 @@
-/* customer portal, root views _ css by alec armbruster for sonar's customer portal 2019, made with <3 in california
- @import 'circular-std.css';
+/*  
  * {
      margin: 0;
      padding: 0;
@@ -308,7 +307,7 @@
  label {
      font-size: 14px;
      letter-spacing: .2px;
-     /*color: #98a0a6;*/
+     color: #98a0a6;
      color: var(--lof_primary_blue);
      margin: 8px 0;
      display: block;
@@ -556,4 +555,4 @@
           animation-duration: 1s;
           transition: opacity .3s ease-out;
      }
-} */
+}  */
