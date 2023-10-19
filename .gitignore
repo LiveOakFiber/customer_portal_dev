@@ -2,7 +2,7 @@
 .idea/*
 /node_modules
 /public/storage
-data/live
+data/certbot/conf/live
 Homestead.json
 Homestead.yaml
 storage/database.sqlite
