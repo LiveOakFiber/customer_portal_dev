@@ -36,12 +36,12 @@ class AuthenticationController extends Controller
      */
     public function index(): Factory|View
     {
-        // $systemSetting = SystemSetting::firstOrNew([
-        //     'id' => 1,
-        // ]);
+        $systemSetting = SystemSetting::firstOrNew([
+            'id' => 1,
+         ]);
 
-        return view('pages.root.maint');
-        // , compact('systemSetting')
+        return view('pages.root.index', compact('systemSetting'));
+
     }
 
     /**
