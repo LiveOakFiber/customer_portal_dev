@@ -22,6 +22,7 @@ class TicketRequest extends FormRequest
         return [
             'subject' => 'string|required',
             'description' => 'string|required',
+            'ticket_group_id' => 'numeric',
         ];
     }
 }

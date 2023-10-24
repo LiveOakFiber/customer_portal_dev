@@ -38,6 +38,25 @@
                   </div>
                </div>
                <div class="form-group">
+                  <label for="ticket_group_id">{{utrans("tickets.ticketgroup")}}</label>
+                  <div class="input-group input-group-merge">
+                     <select class="form-control" id="ticket_group_id" required="required" name="ticket_group_id" aria-required="true">
+                        <option selected="selected" value="">Please select a ticket type</option>
+                        <option value="6">Billing / Payment Support</option>
+                        <option value="6">Customer Service</option>
+                        <option value="3">Technical Support</option>
+                     </select>
+                     <!--{!! 
+                     Form::select("ticket_group_id",["6"=>"Billing / Payment Support","6"=>"Customer Service","3"=>"Technical Support"],null,['class' => 'form-control', 'id' => 'ticket_group_id', 'placeholder' => utrans("tickets.ticketgroupShort"),'required'=>'required']) 
+                     !!}-->
+                     <!--<div class="input-group-prepend">
+                        <div class="input-group-text">
+                           <span class="fe fe-message-square"></span>
+                        </div>
+                     </div>-->
+                  </div>
+               </div>
+               <div class="form-group">
                   <label for="description">{{utrans("tickets.description")}}</label>
                   {!! Form::textarea("description",null,['class' => 'form-control', 'id' => 'description', 'placeholder' => utrans("tickets.descriptionLong")]) !!}
                </div>

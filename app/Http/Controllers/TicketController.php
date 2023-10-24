@@ -81,12 +81,13 @@ class TicketController extends Controller
     public function store(TicketRequest $request): RedirectResponse
     {
         try {
+            error_log("xxx".$request->input('ticket_group_id')."xxx");
             $ticket = new Ticket([
                 'account_id' => get_user()->account_id,
                 'email_address' => get_user()->email_address,
                 'subject' => $request->input('subject'),
                 'description' => $request->input('description'),
-                'ticket_group_id' => config('customer_portal.ticket_group_id'),
+                'ticket_group_id' => (is_numeric($request->input('ticket_group_id'))?$request->input('ticket_group_id'):config('customer_portal.ticket_group_id')),
                 'priority' => config('customer_portal.ticket_priority'),
                 'inbound_email_account_id' => config('customer_portal.inbound_email_account_id'),
             ]);

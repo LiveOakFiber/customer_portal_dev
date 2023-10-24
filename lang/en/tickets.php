@@ -23,4 +23,6 @@ return [
     'beAsDetailed' => 'Be as detailed as possible',
     'includeRelevantInfo' => 'Include any relevant information',
     'neverAskForCredit' => 'Remember that we will never ask for your password or credit card info',
+    'ticketgroup'=>'Ticket Type',
+    'ticketgroupShort'=>"Please select a ticket type"
 ];
