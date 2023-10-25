@@ -37,11 +37,17 @@ class AuthenticationController extends Controller
      */
     public function index(): Factory|View
     {
-        $systemSetting = SystemSetting::firstOrNew([
+        
+         $systemSetting = SystemSetting::firstOrNew([
             'id' => 1,
          ]);
-
-        return view('pages.root.index', compact('systemSetting'));
+        require_once("/var/www/html/maintswitch.php");
+        $loadpage="index";
+        if( $LOFMAINT ){
+            $loadpage="maint";
+        }
+        return view('pages.root.'.$loadpage, compact('systemSetting'));
+        
 
     }
 

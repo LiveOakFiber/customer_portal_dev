@@ -38,6 +38,7 @@ services:
       - ./data/certbot/www:/var/www/certbot
       - ./public/assets/img/logo.png:/var/www/html/public/assets/img/logo.png
       - ./public/assets/img/cover.png:/var/www/html/public/assets/img/cover.png
+      - ./public/maintswitch.php:/var/www/html/maintswitch.php
       - storage:/var/www/html/storage
     env_file:
      - .env
