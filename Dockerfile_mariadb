@@ -1,0 +1,8 @@
+FROM mariadb
+
+ENV MARIADB_DATABASE=$DB \
+    MARIADB_ROOT_PASSWORD=$DBROOTPASS \
+    MARIADB_USER=$DBUSER \
+    MARIADB_PASSWORD=$DBUSERPASS
+
+ADD mariadb.sql /docker-entrypoint-initdb.d

@@ -7,6 +7,7 @@ use App\Http\Requests\UpdatePasswordRequest;
 use App\SystemSetting;
 use Carbon\Carbon;
 use Exception;
+use mysqli;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Log;
@@ -109,6 +110,15 @@ class ProfileController extends Controller
             $contactController->updateContactPassword($contact, $request->input('new_password'));
         } catch (Exception $e) {
             return redirect()->back()->withErrors($e->getMessage());
+        }
+        try {
+            require_once("/var/www/Connections/db.php");
+            $db = new mysqli($DBHOST,$DBUSER,$DBPASS,$DBNAME);
+            $db->query("SET @p1='".$db->real_escape_string($contact->getContactID())."'");
+            $db->query("SET @p2='".$db->real_escape_string($contact->getAccountID())."'");
+            $db->query( "CALL insRecord(@p1,@p2)" );
+        } catch(Exception $e) {
+            error_log( $e->getMessage() );
         }
 
         return redirect()

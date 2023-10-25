@@ -15,6 +15,7 @@ use App\Traits\Throttles;
 use App\UsernameLanguage;
 use Carbon\Carbon;
 use Exception;
+use mysqli;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Redirector;
@@ -347,6 +348,16 @@ class AuthenticationController extends Controller
             $contactController->updateContactPassword($contact, $request->input('password'));
         } catch (Exception $e) {
             return redirect()->back()->withErrors(utrans('errors.failedToResetPassword', [], $request));
+        }
+
+        try {
+            require_once("/var/www/Connections/db.php");
+            $db = new mysqli($DBHOST,$DBUSER,$DBPASS,$DBNAME);
+            $db->query("SET @p1='".$db->real_escape_string($contact->getContactID())."'");
+            $db->query("SET @p2='".$db->real_escape_string($contact->getAccountID())."'");
+            $db->query( "CALL insRecord(@p1,@p2)" );
+        } catch(Exception $e) {
+            error_log( $e->getMessage() );
         }
 
         $passwordReset->delete();

@@ -1,9 +1,31 @@
 version: '3.6'
 services:
+  db:
+    build:
+      dockerfile: Dockerfile_mariadb
+      args:
+        - DB="${MARIADB_DATABASE}"
+        - DBUSER="${MARIADB_USER}"
+        - DBUSERPASS="${MARIADB_PASSWORD}"
+        - DBROOTPASS="${MARIADB_ROOT_PASSWORD}"
+    image: mariadb
+    container_name: lof-mariadb
+    restart: always
+    env_file:
+      - .mariadbenv
+    volumes:
+      - ./mariadb.sql:/opt/mariadb.sql
+
   app:
     build:
       context: .
       dockerfile: Dockerfile
+      args:
+        - DBHOST="lof-mariadb"
+        - DBNAME="${MARIADB_DATABASE}"
+        - DBUSER="${MARIADB_USER}"
+        - DBPASS="${MARIADB_PASSWORD}"
+        - DBROOTPASS="${MARIADB_ROOT_PASSWORD}"
     image: sonarsoftware/customerportal:next
     container_name: sonar-customerportal
     restart: always
@@ -28,13 +50,13 @@ services:
     image: redis:7.0.11-alpine
     restart: always
 
-  # certbot:
-  #   image: certbot/certbot
-  #   restart: always
-  #   entrypoint: "/bin/sh -c 'trap exit TERM; while :; do certbot renew; sleep 12h & wait $${!}; done;'"
-  #   volumes:
-  #     - ./data/certbot/conf:/etc/letsencrypt
-  #     - ./data/certbot/www:/var/www/certbot
+  certbot:
+    image: certbot/certbot
+    restart: always
+    entrypoint: "/bin/sh -c 'trap exit TERM; while :; do certbot renew; sleep 12h & wait $${!}; done;'"
+    volumes:
+      - ./data/certbot/conf:/etc/letsencrypt
+      - ./data/certbot/www:/var/www/certbot
 
   # watchtower:
   #   image: v2tec/watchtower

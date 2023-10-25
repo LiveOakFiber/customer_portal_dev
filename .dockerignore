@@ -2,6 +2,8 @@
 .dockerignore
 .env
 .env.*
+.mariadbenv
+.mariadbenv.*
 .git
 .gitattributes
 .github/

@@ -3,6 +3,10 @@ FROM phusion/baseimage:jammy-1.0.1 AS base
 ENV LC_ALL C.UTF-8
 
 ARG PHP_VERSION=8.2
+ARG DBUSER
+ARG DBNAME
+ARG DBPASS
+ARG DBHOST
 
 RUN add-apt-repository ppa:ondrej/php \
  && add-apt-repository ppa:ondrej/nginx-mainline \
@@ -17,6 +21,7 @@ RUN add-apt-repository ppa:ondrej/php \
       php${PHP_VERSION}-sqlite3 \
       php${PHP_VERSION}-zip \
       php${PHP_VERSION}-dom \
+      php${PHP_VERSION}-mysql \
       unzip
 
 WORKDIR /var/www/html
@@ -49,4 +54,7 @@ RUN mkdir /etc/service/nginx
 COPY deploy/services/nginx.sh /etc/service/nginx/run
 
 VOLUME /var/www/html/storage
+
+RUN mkdir /var/www/Connections; echo "<?php \$DBHOST=$DBHOST; \$DBUSER=$DBUSER; \$DBPASS=$DBPASS; \$DBNAME=$DBNAME;  ?>" > /var/www/Connections/db.php; chown www-data /var/www/Connections -R
+
 EXPOSE 80 443
