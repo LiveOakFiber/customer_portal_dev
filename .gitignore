@@ -8,5 +8,5 @@ Homestead.json
 Homestead.yaml
 storage/database.sqlite
 /vendor
-
+customer_portal_dev.code-workspace
 /.phpunit.cache
