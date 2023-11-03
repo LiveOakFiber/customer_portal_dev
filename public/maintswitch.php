@@ -1,3 +1,3 @@
 <?php
-    $LOFMAINT=true;
+    $LOFMAINT=false;
 ?>

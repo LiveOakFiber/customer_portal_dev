@@ -26,7 +26,7 @@ services:
         - DBUSER="${MARIADB_USER}"
         - DBPASS="${MARIADB_PASSWORD}"
         - DBROOTPASS="${MARIADB_ROOT_PASSWORD}"
-    image: sonarsoftware/customerportal:next
+    image: sonarsoftware/customerportal:stable
     container_name: sonar-customerportal
     restart: always
     tty: true
