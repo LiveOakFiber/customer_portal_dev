@@ -8,6 +8,7 @@ use App\Http\Requests\AuthenticationRequest;
 use App\Http\Requests\LookupEmailRequest;
 use App\Http\Requests\PasswordUpdateRequest;
 use App\Http\Requests\SendPasswordResetRequest;
+use App\PasswordPolicy;
 use App\PasswordReset;
 use App\Services\LanguageService;
 use App\SystemSetting;
@@ -31,6 +32,13 @@ use SonarSoftware\CustomerPortalFramework\Exceptions\AuthenticationException;
 class AuthenticationController extends Controller
 {
     use Throttles;
+
+    private $passwordPolicy;
+
+    public function __construct()
+    {
+        $this->passwordPolicy = new PasswordPolicy();
+    }
 
     /**
      * Show the main login page
@@ -206,6 +214,10 @@ class AuthenticationController extends Controller
             return redirect()->back()->withErrors(utrans('errors.invalidEmailAddress', [], $request))->withInput();
         }
 
+        if (!$this->passwordPolicy->isPasswordValid($request->input('password'))) {
+            return redirect()->back()->withErrors(utrans("errors.passwordIsTooWeak"))->withInput();
+        }
+
         $accountAuthenticationController = new AccountAuthenticationController();
         try {
             $accountAuthenticationController->createUser(
@@ -342,6 +354,10 @@ class AuthenticationController extends Controller
             $this->incrementThrottleValue('password_update', hash('sha256', $token.$request->getClientIp()));
 
             return redirect()->back()->withErrors(utrans('errors.invalidEmailAddress', [], $request));
+        }
+
+        if (!$this->passwordPolicy->isPasswordValid($request->input('password'))) {
+            return redirect()->back()->withErrors(utrans("errors.passwordIsTooWeak"))->withInput();
         }
 
         $contactController = new ContactController();

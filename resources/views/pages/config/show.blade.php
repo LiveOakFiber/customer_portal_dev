@@ -72,6 +72,16 @@
                   </div>
                </div>
             </div>
+            <div class="row mt-1">
+               <div class="col-12 ">
+                  <div class="form-group">
+                     <label>
+                         FCC Label Zip File (<a href="https://fcclabel.sonar.software">fcclabel.sonar.software</a>)
+                     </label> <br>
+                    {!! Form::file('fcclabels', null, ['class' => 'form-control']) !!}
+                  </div>
+               </div>
+            </div>
             {{--<div class="row mt-1">--}}
                {{--<div class="col-12 mb--3 ">--}}
                   {{--<div class="form-group">--}}
@@ -298,7 +308,30 @@
                      <label>
                      Required Password Strength
                      </label>
-                     {!! Form::select('password_strength_required', array('1' => 'Minimal', '2' => 'Low', '3' => 'Moderate', '4' => 'High', '5' => 'Maximum'), $systemSetting->password_strength_required,['id' => 'password_strength_required', 'class' => 'form-control', 'data-toggle' => 'select', 'data-toggle' => 'tooltip', 'data-trigger' => 'hover','data-placement' => 'left','data-offset' => '3','data-html' => 'true', 'data-original-title' => 'The password strength standard required for new users and password resets']); !!}
+                     {{-- These options are 1-5 instead of 0-4, avoiding a migration and handling the offset in PasswordPolicy->isPasswordValid() --}}
+                     {!!
+                         Form::select(
+                            'password_strength_required',
+                            array(
+                                '1' => 'Risky Password (0)',
+                                '2' => 'Very Guessable (1)',
+                                '3' => 'Somewhat Guessable (2)',
+                                '4' => 'Safely Unguessable (3)',
+                                '5' => 'Very Unguessable (4)',
+                            ),
+                            $systemSetting->password_strength_required,
+                            [
+                                'id' => 'password_strength_required',
+                                'class' => 'form-control',
+                                'data-toggle' => 'tooltip',
+                                'data-trigger' => 'hover',
+                                'data-placement' => 'left',
+                                'data-offset' => '3',
+                                'data-html' => 'true',
+                                'data-original-title' => 'The password strength standard required for new users and password resets',
+                            ]
+                         );
+                     !!}
                   </div>
                </div>
             </div>
@@ -519,7 +552,23 @@
                      <label>
                      PayPal Currency
                      </label>
-                     {!! Form::select('paypal_currency_code', $paypalCurrency, $systemSetting->paypal_currency_code,['id' => 'paypal_currency_code', 'class' => 'form-control', 'data-toggle' => 'select', 'data-toggle' => 'tooltip', 'data-trigger' => 'hover','data-placement' => 'left','data-offset' => '3','data-html' => 'true', 'data-original-title' => 'The currency mode your PayPal account is configured for']); !!}
+                     {!!
+                        Form::select(
+                            'paypal_currency_code',
+                            $paypalCurrency,
+                            $systemSetting->paypal_currency_code,
+                            [
+                                'id' => 'paypal_currency_code',
+                                'class' => 'form-control',
+                                'data-toggle' => 'tooltip',
+                                'data-trigger' => 'hover',
+                                'data-placement' => 'left',
+                                'data-offset' => '3',
+                                'data-html' => 'true',
+                                'data-original-title' => 'The currency mode your PayPal account is configured for'
+                            ]
+                        );
+                     !!}
                   </div>
                </div>
             </div>

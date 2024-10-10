@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\ProfileUpdateRequest;
 use App\Http\Requests\UpdatePasswordRequest;
+use App\PasswordPolicy;
 use App\SystemSetting;
 use Carbon\Carbon;
 use Exception;
@@ -20,6 +21,13 @@ use SonarSoftware\CustomerPortalFramework\Models\PhoneNumber;
 
 class ProfileController extends Controller
 {
+    private $passwordPolicy;
+
+    public function __construct()
+    {
+        $this->passwordPolicy = new PasswordPolicy();
+    }
+
     public function show(): Factory|View
     {
         $user = get_user();
@@ -69,7 +77,10 @@ class ProfileController extends Controller
             $fax->setNumber(preg_replace('/[^0-9]/', '', $request->input('fax')));
             $contact->setPhoneNumber($fax);
         } catch (Exception $e) {
-            return redirect()->back()->withErrors($e->getMessage());
+            return redirect()
+                ->back()
+                ->withInput()
+                ->withErrors($e->getMessage());
         }
 
         $contactController = new ContactController();
@@ -77,8 +88,10 @@ class ProfileController extends Controller
             $contactController->updateContact($contact);
         } catch (Exception $e) {
             Log::error($e);
-
-            return redirect()->back()->withErrors(utrans('errors.failedToUpdateProfile'));
+            return redirect()
+                ->back()
+                ->withInput()
+                ->withErrors($this->convertErrorMessage($e->getMessage()));
         }
 
         $this->clearProfileCache();
@@ -102,6 +115,10 @@ class ProfileController extends Controller
             );
         } catch (Exception $e) {
             return redirect()->back()->withErrors(utrans('errors.currentPasswordInvalid'));
+        }
+
+        if (!$this->passwordPolicy->isPasswordValid($request->input('new_password'))) {
+            return redirect()->back()->withErrors(utrans("errors.passwordIsTooWeak"))->withInput();
         }
 
         $contact = $this->getContact();
@@ -148,5 +165,16 @@ class ProfileController extends Controller
         }
 
         return Cache::tags('profile.details')->get(get_user()->contact_id);
+    }
+
+    private function convertErrorMessage(string $message)
+    {
+        //Trying to save a phone number type that doesn't exist in Sonar will result in this message. The caching above
+        //in getContact() compounds the problem sending old phone number types after they've been edited.
+        if (strpos($message, 'The Phone Number Type is invalid: ') === 0) {
+            return utrans("errors.phoneNumberNotValid");
+        }
+
+        return utrans("errors.failedToUpdateProfile");
     }
 }
